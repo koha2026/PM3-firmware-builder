@@ -1,9 +1,6 @@
 {
     "refs": [
-        "master",
-        "v4.17140",
-        "v4.16717",
-        "v4.15864"
+        "master"
     ],
     "standaloneList": ["", "HF_14ASNIFF"],
     "PLATFORM": "PM3GENERIC",
@@ -16,7 +13,11 @@
         "SKIP_LEGICRF",
         "SKIP_ISO14443b",
         "SKIP_EM4x50",
-        "SKIP_NFCBARCODE"
+        "SKIP_NFCBARCODE",
+        "SKIP_HFSNIFF",
+        "SKIP_HFPLOT",
+        "SKIP_EM4X70",
+        "SKIP_ZX8211"
     ],
     "extraLines": [],
     "buildS19": true,
