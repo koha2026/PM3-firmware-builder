@@ -7,17 +7,6 @@
     "PLATFORM_EXTRAS": "",
     "PLATFORM_SIZE": "256",
     "extraOptions": [
-        "SKIP_HITAG",
-        "SKIP_ICLASS",
-        "SKIP_FELICA",
-        "SKIP_LEGICRF",
-        "SKIP_ISO14443b",
-        "SKIP_EM4x50",
-        "SKIP_NFCBARCODE",
-        "SKIP_HFSNIFF",
-        "SKIP_HFPLOT",
-        "SKIP_EM4X70",
-        "SKIP_ZX8211"
     ],
     "extraLines": [],
     "buildS19": true,
