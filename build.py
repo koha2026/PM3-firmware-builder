@@ -132,8 +132,26 @@ def build_firmware(variant_name, extra_skip_options):
     print(f"Variant {variant_name} built successfully. Output in {output_dir}", flush=True)
 
 
-# Options to skip when HF support is disabled
-# (adjust as needed)
+# ---------------------------------------------------------------------------
+# SKIP options for the two variants.
+#
+# IMPORTANT:
+#   - `extraOptions` in config.json should only contain COMMON options.
+#   - Do NOT put HF- or LF-specific SKIPs there.
+#   - All HF-specific SKIPs belong to `HF_SKIP_OPTIONS`.
+#   - All LF-specific SKIPs belong to `LF_SKIP_OPTIONS`.
+# ---------------------------------------------------------------------------
+
+# LF modules to skip when building an HF-only firmware (`no_lf`).
+LF_SKIP_OPTIONS = [
+    "SKIP_LF",          # If supported by the current codebase, otherwise harmless.
+    "SKIP_HITAG",
+    "SKIP_EM4x50",
+    "SKIP_EM4X70",
+    "SKIP_ZX8211",
+]
+
+# HF modules to skip when building an LF-only firmware (`no_hf`).
 HF_SKIP_OPTIONS = [
     "SKIP_ISO14443a",
     "SKIP_ISO14443b",
@@ -146,8 +164,10 @@ HF_SKIP_OPTIONS = [
     "SKIP_SEOS",
 ]
 
-# Build both variants in order
-build_firmware("no_lf", ["SKIP_LF"])
+# Build both variants in order.
+#   no_lf -> HF-only firmware (skip LF modules)
+#   no_hf -> LF-only firmware (skip HF modules)
+build_firmware("no_lf", LF_SKIP_OPTIONS)
 build_firmware("no_hf", HF_SKIP_OPTIONS)
 
 print("\nAll variants built successfully.", flush=True)
