@@ -1,21 +1,12 @@
 {
     "refs": [
-        "master",
-        "v4.20728",
-        "da509461b734a61994f8e430e3151e9084bf9718"
+        "master"
     ],
-    "standaloneList": ["", "HF_14ASNIFF"],
+    "standaloneList": [""],
     "PLATFORM": "PM3GENERIC",
     "PLATFORM_EXTRAS": "",
-    "PLATFORM_SIZE": "256",
+    "PLATFORM_SIZE": "512",
     "extraOptions": [
-        "SKIP_ICLASS",
-        "SKIP_FELICA",
-        "SKIP_LEGICRF",
-        "SKIP_ISO14443b",
-        "SKIP_NFCBARCODE",
-        "SKIP_HFSNIFF",
-        "SKIP_HFPLOT"
     ],
     "extraLines": [],
     "buildS19": true,
